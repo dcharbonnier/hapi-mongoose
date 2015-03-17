@@ -1,6 +1,6 @@
 {
   "name": "hapi-mongoose",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/dcharbonnier/hapi-mongoose",
   "devDependencies": {
+    "hapi": "^8.4.0",
     "mocha": "2.2.1",
+    "mongoose": "3.8.25",
     "should": "5.2.0"
   }
 }

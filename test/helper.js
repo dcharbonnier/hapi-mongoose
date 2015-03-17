@@ -1,8 +1,11 @@
 /* globals global, require, before */
 
+var Hapi = require('hapi');
+
 global.should = require('should');
 global.mongoose = require('mongoose');
 global.Schema = mongoose.Schema;
+global.server = new Hapi.Server();
 
 before(function () {
     mongoose.model('Tank', new mongoose.Schema({
@@ -34,5 +37,21 @@ before(function () {
         tank: {type: Schema.Types.ObjectId, ref: 'Tank'},
         things: [{type: Schema.Types.ObjectId, ref: 'Thing'}]
     }));
+
+    server.connection({
+        host: 'localhost',
+        port: 8000
+    });
+
+    server.register({
+        register: require('../src').plugin,
+        options: {
+            models: ['Thank', 'Thing', 'Think']
+        }
+    }, function () {
+
+    });
+
+    server.start();
 });
 
