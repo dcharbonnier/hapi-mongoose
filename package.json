@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dcharbonnier/hapi-mongoose/issues"
   },
-  "homepage": "https://github.com/dcharbonnier/hapi-mongoose"
+  "homepage": "https://github.com/dcharbonnier/hapi-mongoose",
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
+  }
 }
